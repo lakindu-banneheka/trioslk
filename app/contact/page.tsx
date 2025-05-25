@@ -12,7 +12,6 @@ import { Label } from "@/components/ui/label"
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, CheckCircle2, Loader2 } from "lucide-react"
 import { motion } from "@/components/motion"
 import Link from "next/link"
-import AnimatedFAQ from "@/components/animated-faq"
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -434,36 +433,6 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* FAQ Section */}
-      <section className="py-16 md:py-24 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-              className="text-3xl md:text-4xl font-bold mb-4 dark:text-white"
-            >
-              Frequently Asked Questions
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
-            >
-              Find answers to common questions about our services
-            </motion.p>
-          </div>
-
-          <div className="max-w-3xl mx-auto">
-            <AnimatedFAQ faqs={faqs} />
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -496,7 +465,7 @@ export default function ContactPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-white border-white hover:bg-white hover:text-red-600 group"
+                className="text-white border-white hover:bg-white bg-white/5 hover:text-red-600 group"
               >
                 <Phone className="mr-2 h-4 w-4" />
                 <span>Call Us</span>
