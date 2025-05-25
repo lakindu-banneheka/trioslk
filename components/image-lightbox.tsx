@@ -56,7 +56,7 @@ export default function ImageLightbox({ images, initialIndex = 0, isOpen, onClos
         <Button
           variant="ghost"
           size="icon"
-          className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white rounded-full"
+          className="absolute top-4 right-4 z-10 bg-black/50 hover:bg-black/70 text-white hover:text-white/80 rounded-full"
           onClick={onClose}
         >
           <X className="h-6 w-6" />

@@ -10,10 +10,41 @@ import ScrollToTop from "@/components/scroll-to-top"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Trios.LK | Event Planner • Digital Creator • Designer",
-  description:
-    "Trios.LK offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
-    generator: 'v0.dev'
+  title: "TriosLK",
+  metadataBase: new URL("https://trios.lk"),
+  openGraph: {
+    title: "TriosLK",
+    description:
+      "Trios.LK offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
+    url: "https://trios.lk",
+    siteName: "TriosLK",
+    images: [
+      {
+        url: "https://trios.lk/images/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "TriosLK - Event Planning, Signage Solutions, Photography, and Education",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  keywords: [
+    "TriosLK",
+    "Event Planning",
+    "Signage Solutions",
+    "Photography",
+    "Trios Academy",
+    "Sri Lanka",
+    "Community Events",
+    "Educational Programs",
+  ],
+  description: "Trios.LK offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
 }
 
 export default function RootLayout({
@@ -23,6 +54,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+      </head>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
           <div className="flex min-h-screen flex-col">

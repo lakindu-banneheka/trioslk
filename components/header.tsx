@@ -57,7 +57,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="relative h-12 w-32 md:h-14 md:w-36">
-            <Image
+            {/* <Image
               src="/images/trios-logo.png"
               alt="Trios.LK Logo"
               fill
@@ -70,7 +70,13 @@ export default function Header() {
               fill
               className="object-contain hidden dark:block"
               priority
-            />
+            /> */}
+            <div
+              className="flex items-center justify-center h-full w-full text-2xl font-bold text-red-600 dark:text-red-400"
+              style={{ fontFamily: "'Poppins', sans-serif" }}
+            >
+              TriosLK
+            </div>
           </Link>
 
           {/* Desktop Navigation */}

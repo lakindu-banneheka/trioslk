@@ -1,29 +1,21 @@
 "use client"
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { motion } from "@/components/motion"
 import Link from "next/link"
-import { Camera, Users, Award, ChevronRight } from "lucide-react"
+import { Camera, Users, Award, ChevronRight, Images } from "lucide-react"
 import AnimatedFAQ from "@/components/animated-faq"
 import ImageLightbox from "@/components/image-lightbox"
+import { portfolioImages } from "@/data/triography"
 
 export default function TriographyPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
-
-  const portfolioImages = [
-    { src: "/images/project-1.jpg", alt: "Photography Project 1" },
-    { src: "/images/project-2.jpg", alt: "Photography Project 2" },
-    { src: "/images/project-3.jpg", alt: "Photography Project 3" },
-    { src: "/images/event-1.jpg", alt: "Photography Project 4" },
-    { src: "/images/event-2.jpg", alt: "Photography Project 5" },
-    { src: "/images/event-3.jpg", alt: "Photography Project 6" },
-  ]
-
+  
   const openLightbox = (index: number) => {
-    setCurrentImageIndex(index)
+    setCurrentImageIndex(index) // Reset to first image
     setLightboxOpen(true)
   }
 
@@ -96,7 +88,7 @@ export default function TriographyPage() {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="text-white border-white hover:bg-white hover:text-red-600"
+                  className="text-black border-white hover:bg-white hover:text-red-600"
                 >
                   Contact Us
                 </Button>
@@ -142,7 +134,7 @@ export default function TriographyPage() {
             >
               <div className="relative h-64">
                 <Image
-                  src="/images/event-1.jpg"
+                  src="/images/triography/22_Unlocked_and_Unapologetic.png"
                   alt="Event Photography"
                   fill
                   className="object-cover transition-transform duration-500 hover:scale-105"
@@ -343,7 +335,8 @@ export default function TriographyPage() {
                 <Image src={image.src || "/placeholder.svg"} alt={image.alt} fill className="object-cover" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
                   <div className="opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300">
-                    <Button className="bg-red-600 hover:bg-red-700 dark:bg-red-700 dark:hover:bg-red-600">
+                    <Button className="bg-black/5 hover:bg-black/10 text-white">
+                      <Images className="h-5 w-5 mr-2" />
                       View Image
                     </Button>
                   </div>

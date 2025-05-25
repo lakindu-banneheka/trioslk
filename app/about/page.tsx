@@ -1,7 +1,11 @@
+'use client'
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Users, Award, Target, ArrowRight } from "lucide-react"
+import { CheckCircle2, Users, Award, Target, ArrowRight, Instagram } from "lucide-react"
+import Autoplay from "embla-carousel-autoplay"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import { teamMembers } from "@/data/about"
 
 export default function AboutPage() {
   return (
@@ -19,12 +23,7 @@ export default function AboutPage() {
               We are a creative agency specializing in event planning, signage solutions, photography, and educational
               programs.
             </p>
-            <Link
-              href="/about#team"
-              className="inline-flex items-center bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-md font-medium transition-colors"
-            >
-              Learn More About Us <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
+           
           </div>
         </div>
       </section>
@@ -36,7 +35,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6">
-                Founded in 2015, Trios.LK began as a small event planning company with a vision to provide comprehensive
+                Founded in 2017, Trios.LK began as a small event planning company with a vision to provide comprehensive
                 creative services under one roof. Over the years, we have expanded our offerings to include signage
                 solutions, professional photography, and educational programs through our Trios Academy.
               </p>
@@ -57,156 +56,37 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Mission & Vision */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Mission & Vision</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">
-              Guided by our core values, we strive to deliver exceptional services and experiences
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            {/* Mission */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100">
-                <Target className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Our Mission</h3>
-              <p className="text-gray-600 mb-6">
-                To provide innovative, high-quality creative services that exceed our clients' expectations and help
-                them achieve their goals. We are committed to delivering exceptional value through our expertise,
-                attention to detail, and personalized approach.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-5 w-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                  <span>Deliver exceptional quality in all our services</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-5 w-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                  <span>Provide personalized solutions tailored to each client's needs</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-5 w-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                  <span>Maintain the highest standards of professionalism and integrity</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* Vision */}
-            <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100">
-                <Award className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-2xl font-bold mb-4">Our Vision</h3>
-              <p className="text-gray-600 mb-6">
-                To be the leading creative agency in Sri Lanka, recognized for our innovation, excellence, and
-                comprehensive service offerings. We aspire to set new standards in the industry and be the go-to partner
-                for clients seeking creative solutions.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-5 w-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                  <span>Become the most trusted creative agency in the region</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-5 w-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                  <span>Continuously innovate and expand our service offerings</span>
-                </li>
-                <li className="flex items-start">
-                  <CheckCircle2 className="h-5 w-5 text-red-600 mt-0.5 mr-3 flex-shrink-0" />
-                  <span>Foster a culture of creativity, learning, and growth</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Core Values */}
       <section className="py-16 md:py-24">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Core Values</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">The principles that guide our work and relationships</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Partners</h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">Trusted Partners Who Help Bring the Vision to Life</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Value 1 */}
-            <div className="text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100">
-                <Award className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Excellence</h3>
-              <p className="text-gray-600">
-                We strive for excellence in everything we do, from the quality of our services to the relationships we
-                build with our clients.
-              </p>
-            </div>
-
-            {/* Value 2 */}
-            <div className="text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100">
-                <Users className="h-8 w-8 text-red-600" />
-              </div>
-              <h3 className="text-xl font-bold mb-3">Collaboration</h3>
-              <p className="text-gray-600">
-                We believe in the power of collaboration, working closely with our clients and partners to achieve
-                shared goals and create exceptional results.
-              </p>
-            </div>
-
-            {/* Value 3 */}
-            <div className="text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="h-8 w-8 text-red-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
+          {/* Our Partners carousel */}
+          <Carousel opts={{ loop: true, align: 'start' }} plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]} className="py-8">
+            <CarouselContent className="!flex-nowrap">
+              {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
+                <CarouselItem key={idx} className="!basis-1/3 flex items-center justify-center px-4">
+                  <Image
+                    src={`/images/partners/${i}.png`}
+                    alt={`Partner ${i}`}
+                    width={120}
+                    height={70}
+                    className="mx-auto"
                   />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Innovation</h3>
-              <p className="text-gray-600">
-                We embrace creativity and innovation, constantly seeking new ways to solve problems and deliver unique
-                solutions that set our clients apart.
-              </p>
-            </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+          </Carousel>
 
-            {/* Value 4 */}
-            <div className="text-center">
-              <div className="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth={1.5}
-                  stroke="currentColor"
-                  className="h-8 w-8 text-red-600"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"
-                  />
-                </svg>
-              </div>
-              <h3 className="text-xl font-bold mb-3">Integrity</h3>
-              <p className="text-gray-600">
-                We conduct our business with the highest level of integrity, honesty, and transparency, building trust
-                with our clients and partners.
-              </p>
-            </div>
+          <div className="text-center mt-12">
+            <Button className="bg-red-600 hover:bg-red-700" asChild>
+              <Link href="/contact" className="flex items-center">
+                Become a Partner <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
@@ -220,155 +100,67 @@ export default function AboutPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-80">
-                <Image src="/images/team-1.jpg" alt="Team Member" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">Rajith Fernando</h3>
-                <p className="text-red-600 font-medium mb-3">Founder & CEO</p>
-                <p className="text-gray-600 mb-4">
-                  With over 15 years of experience in the creative industry, Rajith leads our team with vision and
-                  passion.
-                </p>
-                <div className="flex space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
 
-            {/* Team Member 2 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-80">
-                <Image src="/images/team-2.jpg" alt="Team Member" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">Amali Perera</h3>
-                <p className="text-red-600 font-medium mb-3">Creative Director</p>
-                <p className="text-gray-600 mb-4">
-                  Amali brings her creative vision and expertise to every project, ensuring exceptional results for our
-                  clients.
-                </p>
-                <div className="flex space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                    </svg>
-                  </a>
+            {teamMembers.map((member, index) => (
+              <div className="bg-white rounded-lg overflow-hidden shadow-sm" key={index}>
+                <div className="relative h-80">
+                  <Image src={member.image} alt="Team Member" fill className="object-cover" />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                  <p className="text-red-600 font-medium mb-3">{member.role}</p>
+                  <p className="text-gray-600 mb-4">
+                    {member.description}
+                  </p>
+                  <div className="flex space-x-3">
+                    {member.socialmeadia.facebook && 
+                      <a href={member.socialmeadia.facebook} className="text-gray-400 hover:text-red-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                      </a>
+                    }
+                    { member.socialmeadia.linkedin &&
+                      <a href={member.socialmeadia.linkedin} className="text-gray-400 hover:text-red-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                      </a>
+                    }
+                    { member.socialmeadia.twitter &&
+                      <a href={member.socialmeadia.twitter} className="text-gray-400 hover:text-red-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          fill="currentColor"
+                          viewBox="0 0 16 16"
+                        >
+                          <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
+                        </svg>
+                      </a>
+                    }
+                    { member.socialmeadia.instagram &&
+                      <a href={member.socialmeadia.instagram} className="text-gray-400 hover:text-red-600 transition-colors" target="_blank" rel="noopener noreferrer">
+                        <Instagram className="h-5 w-5" />
+                      </a>
+                    }
+                  </div>
                 </div>
               </div>
-            </div>
-
-            {/* Team Member 3 */}
-            <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-              <div className="relative h-80">
-                <Image src="/images/team-3.jpg" alt="Team Member" fill className="object-cover" />
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-1">Dinesh Jayawardena</h3>
-                <p className="text-red-600 font-medium mb-3">Head of Photography</p>
-                <p className="text-gray-600 mb-4">
-                  With a keen eye for detail and composition, Dinesh leads our photography team to capture moments that
-                  tell compelling stories.
-                </p>
-                <div className="flex space-x-3">
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                    </svg>
-                  </a>
-                  <a href="#" className="text-gray-400 hover:text-red-600 transition-colors">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="currentColor"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
-                    </svg>
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
 
           <div className="text-center mt-12">
@@ -492,11 +284,11 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
-              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white hover:text-red-600">
+              <Button size="lg" variant="outline" className="text-white border-white hover:bg-white bg-white/5 hover:text-red-600">
                 Contact Us
               </Button>
             </Link>
-            <Link href="/about#services">
+            <Link href="/#services">
               <Button size="lg" className="bg-white text-red-600 hover:bg-gray-100">
                 Explore Our Services
               </Button>
