@@ -1,3 +1,5 @@
+'use client'
+
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -6,36 +8,11 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import AnimatedFAQ from "@/components/animated-faq"
 import { motion } from "@/components/motion"
+import { faqs } from "@/data/triovents"
+import { featuredEvents } from "@/data/featured-events"
 
 export default function TrioventsPage() {
-  // FAQ data
-  const faqs = [
-    {
-      question: "How far in advance should I book your event planning services?",
-      answer:
-        "We recommend booking our services at least 3-6 months in advance for corporate events and 6-12 months for weddings and large-scale events. However, we can accommodate shorter timelines depending on availability and the complexity of your event. For peak seasons, earlier booking is advised to secure your preferred date.",
-    },
-    {
-      question: "What is your pricing structure for event planning?",
-      answer:
-        "Our pricing varies based on the scope, size, and complexity of your event. We offer different packages to suit various budgets and requirements, from full-service planning to day-of coordination. We provide transparent, detailed quotes after an initial consultation where we discuss your specific needs and expectations. Contact us for a customized quote based on your event requirements.",
-    },
-    {
-      question: "Do you handle all aspects of event planning or can I choose specific services?",
-      answer:
-        "We offer both comprehensive event planning services and à la carte options. You can choose full-service planning or select specific services such as venue selection, vendor management, or day-of coordination. Our flexible approach allows you to customize our services based on your needs and budget, ensuring you get exactly the support you require for your event.",
-    },
-    {
-      question: "Can you work within my budget?",
-      answer:
-        "Yes, we pride ourselves on working with clients across various budget ranges. We'll help you prioritize elements of your event to maximize your budget while still creating a memorable experience. Our team is skilled at finding creative solutions and negotiating with vendors to ensure you get the best value without compromising on quality.",
-    },
-    {
-      question: "Do you have preferred vendors or can I choose my own?",
-      answer:
-        "We have a network of trusted vendors we regularly work with, but we're also happy to work with vendors of your choice. Our goal is to ensure your event reflects your vision and preferences. If you have specific vendors in mind, we'll collaborate with them seamlessly. If you need recommendations, we can suggest reliable professionals from our network who match your style and budget.",
-    },
-  ]
+
 
   return (
     <div className="flex flex-col w-full">
@@ -319,86 +296,43 @@ export default function TrioventsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Event 1 */}
-            <div className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-80">
-                <Image
-                  src="/images/event-1.jpg"
-                  alt="Corporate Conference"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
-              <div className="absolute bottom-0 left-0 p-6">
-                <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-full mb-3">
-                  Corporate
-                </span>
-                <h3 className="text-xl font-bold text-white mb-2">Annual Tech Conference</h3>
-                <div className="flex items-center text-gray-200 text-sm mb-2">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span>March 15-17, 2023</span>
-                </div>
-                <div className="flex items-center text-gray-200 text-sm">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span>Colombo, Sri Lanka</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Event 2 */}
-            <div className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-80">
-                <Image
-                  src="/images/event-2.jpg"
-                  alt="Luxury Wedding"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
-              <div className="absolute bottom-0 left-0 p-6">
-                <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-full mb-3">
-                  Wedding
-                </span>
-                <h3 className="text-xl font-bold text-white mb-2">Beachfront Luxury Wedding</h3>
-                <div className="flex items-center text-gray-200 text-sm mb-2">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span>February 12, 2023</span>
-                </div>
-                <div className="flex items-center text-gray-200 text-sm">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span>Bentota, Sri Lanka</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Event 3 */}
-            <div className="group relative overflow-hidden rounded-lg">
-              <div className="relative h-80">
-                <Image
-                  src="/images/event-3.jpg"
-                  alt="Music Festival"
-                  fill
-                  className="object-cover transition-transform duration-500 group-hover:scale-110"
-                />
-              </div>
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
-              <div className="absolute bottom-0 left-0 p-6">
-                <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-full mb-3">
-                  Festival
-                </span>
-                <h3 className="text-xl font-bold text-white mb-2">Summer Music Festival</h3>
-                <div className="flex items-center text-gray-200 text-sm mb-2">
-                  <Calendar className="h-4 w-4 mr-2" />
-                  <span>July 8-10, 2023</span>
-                </div>
-                <div className="flex items-center text-gray-200 text-sm">
-                  <MapPin className="h-4 w-4 mr-2" />
-                  <span>Negombo, Sri Lanka</span>
-                </div>
-              </div>
-            </div>
+            { featuredEvents.map((project, index) => (
+              <Link href={project.link} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-lg">
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative overflow-hidden rounded-lg"
+                >
+                  <div className="relative h-80">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
+                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-full mb-3">
+                      {project.category}
+                    </span>
+                    <h3 className="text-xl font-bold text-white mb-2">{project.title}</h3>
+                    {/* <p className="text-gray-200 text-sm mb-2">{project.description}</p> */}
+                    <div className="flex items-center text-gray-200 text-sm mb-2">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>{project.date}</span>
+                    </div>
+                    <div className="flex items-center text-gray-200 text-sm">
+                      <MapPin className="h-4 w-4 mr-2" />
+                      <span>{project.location}</span>
+                    </div>
+                  </div>
+                </motion.div>
+              </Link>
+            ))}
           </div>
 
           <div className="text-center mt-12">
@@ -629,7 +563,7 @@ export default function TrioventsPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-white border-white hover:bg-white hover:text-red-600 group"
+                className="text-white border-white bg-white/5 hover:bg-white hover:text-red-600 group"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

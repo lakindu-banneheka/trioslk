@@ -3,7 +3,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, ImageIcon, Megaphone, GraduationCap, ArrowRight, CheckCircle2 } from "lucide-react"
-import { featuredProjects } from "@/data/featured-projects"
+import { featuredEvents } from "@/data/featured-events"
 
 export default function Home() {
   return (
@@ -193,7 +193,7 @@ export default function Home() {
       <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Events</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Explore some of our recent work across our different service areas
             </p>
@@ -201,7 +201,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-            { featuredProjects.map((project) => (
+            { featuredEvents.slice(0,3).map((project) => (
               <div key={project.title} className="group relative overflow-hidden rounded-lg">
                 <div className="relative h-80">
                   <Image
@@ -218,7 +218,7 @@ export default function Home() {
                   </span>
                   <h3 className="text-xl font-bold text-white mb-2">{project.description}</h3>
                   <Link href={project.link} className="text-red-400 hover:underline" target="_blank" rel="noopener noreferrer">
-                    View Project
+                    View Event
                   </Link>
                 </div>
               </div>
@@ -226,7 +226,11 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-12">
-            <Button className="bg-red-600 hover:bg-red-700">View All Projects</Button>
+            <Link href="/triovents/all-events" >
+              <Button className="bg-red-600 hover:bg-red-700">
+                View All Events
+              </Button>
+            </Link>
           </div>
         </div>
       </section>
@@ -376,7 +380,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Bring Your Vision to Life?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your project and discover how Trios.LK can help you achieve your goals.
+            Contact us today to discuss your project and discover how TriosLK can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

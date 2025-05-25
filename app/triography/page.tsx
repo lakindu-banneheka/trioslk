@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { motion } from "@/components/motion"
@@ -8,7 +8,7 @@ import Link from "next/link"
 import { Camera, Users, Award, ChevronRight, Images } from "lucide-react"
 import AnimatedFAQ from "@/components/animated-faq"
 import ImageLightbox from "@/components/image-lightbox"
-import { portfolioImages } from "@/data/triography"
+import { faqs, galleryItems } from "@/data/triography"
 
 export default function TriographyPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -18,34 +18,6 @@ export default function TriographyPage() {
     setCurrentImageIndex(index) // Reset to first image
     setLightboxOpen(true)
   }
-
-  const faqs = [
-    {
-      question: "What types of photography services do you offer?",
-      answer:
-        "We offer a wide range of photography services including event photography, portrait photography, product photography, corporate photography, and creative conceptual photography. Our team specializes in capturing moments that tell your unique story.",
-    },
-    {
-      question: "How far in advance should I book your photography services?",
-      answer:
-        "For events and weddings, we recommend booking at least 2-3 months in advance to ensure availability. For smaller sessions like portraits or product photography, 2-3 weeks notice is usually sufficient, but availability may vary during peak seasons.",
-    },
-    {
-      question: "Do you provide edited photos as part of your packages?",
-      answer:
-        "Yes, all our photography packages include professionally edited photos. We carefully select and enhance each image to ensure the best quality. The number of edited photos varies depending on the package you choose.",
-    },
-    {
-      question: "How long does it take to receive the final photos?",
-      answer:
-        "Typically, you can expect to receive your edited photos within 2-3 weeks after your session or event. For larger events or during peak seasons, it might take up to 4 weeks. We always strive to deliver your memories as quickly as possible without compromising on quality.",
-    },
-    {
-      question: "Do you travel outside of Colombo for photography assignments?",
-      answer:
-        "Yes, we are available for photography assignments throughout Sri Lanka. For locations outside of Colombo, additional travel fees may apply depending on the distance and duration of the assignment.",
-    },
-  ]
 
   return (
     <div className="flex flex-col w-full">
@@ -322,7 +294,7 @@ export default function TriographyPage() {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {portfolioImages.map((image, index) => (
+            {galleryItems.slice(0,6).map((image, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, scale: 0.9 }}
@@ -423,7 +395,7 @@ export default function TriographyPage() {
 
       {/* Image Lightbox */}
       <ImageLightbox
-        images={portfolioImages}
+        images={galleryItems.slice(0,6)}
         initialIndex={currentImageIndex}
         isOpen={lightboxOpen}
         onClose={() => setLightboxOpen(false)}

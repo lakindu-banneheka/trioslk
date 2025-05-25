@@ -7,91 +7,12 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight } from "lucide-react"
 import { motion } from "@/components/motion"
 import ImageLightbox from "@/components/image-lightbox"
+import { categories, galleryItems } from "@/data/triography"
 
 // Define the categories for filtering
-const categories = ["All", "Wedding", "Corporate", "Events", "Portrait", "Product"]
 
 // Define the gallery items with their categories
-const galleryItems = [
-  {
-    id: 1,
-    src: "/images/gallery-1.png",
-    alt: "Wedding Photography",
-    title: "Beachfront Wedding",
-    category: "Wedding",
-    description:
-      "Elegant beachfront wedding ceremony captured during sunset, showcasing the couple's special moment with the ocean as a backdrop.",
-  },
-  {
-    id: 2,
-    src: "/images/gallery-2.png",
-    alt: "Corporate Event",
-    title: "Annual Conference",
-    category: "Corporate",
-    description:
-      "Professional coverage of a major corporate conference, highlighting key speakers and networking moments.",
-  },
-  {
-    id: 3,
-    src: "/images/gallery-3.png",
-    alt: "Product Photography",
-    title: "Product Launch",
-    category: "Product",
-    description:
-      "High-quality product photography for a new tech gadget launch, emphasizing design details and features.",
-  },
-  {
-    id: 4,
-    src: "/images/gallery-4.png",
-    alt: "Family Portrait",
-    title: "Family Portrait",
-    category: "Portrait",
-    description: "Warm family portrait session capturing genuine connections and personalities in a natural setting.",
-  },
-  {
-    id: 5,
-    src: "/images/gallery-5.png",
-    alt: "Music Festival",
-    title: "Summer Music Festival",
-    category: "Events",
-    description:
-      "Dynamic coverage of a summer music festival, capturing the energy of performances and audience engagement.",
-  },
-  {
-    id: 6,
-    src: "/images/gallery-6.png",
-    alt: "Engagement Session",
-    title: "Engagement Session",
-    category: "Wedding",
-    description:
-      "Romantic engagement photoshoot in a scenic location, telling the couple's story through candid moments.",
-  },
-  {
-    id: 7,
-    src: "/images/gallery-7.png",
-    alt: "Corporate Headshot",
-    title: "Professional Headshot",
-    category: "Corporate",
-    description:
-      "Professional headshot photography for corporate profiles, creating a polished and approachable image.",
-  },
-  {
-    id: 8,
-    src: "/images/gallery-8.png",
-    alt: "Food Photography",
-    title: "Culinary Showcase",
-    category: "Product",
-    description: "Appetizing food photography for a restaurant menu, highlighting texture, color, and presentation.",
-  },
-  {
-    id: 9,
-    src: "/images/gallery-9.png",
-    alt: "Fashion Photography",
-    title: "Fashion Collection",
-    category: "Portrait",
-    description: "Creative fashion photography showcasing a designer's latest collection with artistic composition.",
-  },
-]
+
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState("All")
@@ -199,7 +120,12 @@ export default function PortfolioPage() {
 
       {/* Lightbox */}
       {selectedImage !== null && (
-        <ImageLightbox images={galleryItems} initialImageId={selectedImage} onClose={() => setSelectedImage(null)} />
+        <ImageLightbox
+          images={galleryItems}
+          initialIndex={selectedImage-1}
+          isOpen={selectedImage !== null}
+          onClose={() => setSelectedImage(null)}
+        />
       )}
     </div>
   )

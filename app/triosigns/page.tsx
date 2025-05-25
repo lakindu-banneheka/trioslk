@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -411,126 +412,6 @@ export default function TriosignsPage() {
         </div>
       </section>
 
-      {/* Materials & Technology */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Materials & Technology</h2>
-              <p className="text-gray-600 mb-6">
-                At Triosigns, we use only the highest quality materials and cutting-edge technology to ensure your
-                signage is durable, visually striking, and delivers maximum impact.
-              </p>
-              <div className="space-y-6">
-                <div className="flex">
-                  <div className="mr-4 flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-red-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="h-6 w-6 text-red-600"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-2">Premium Materials</h3>
-                    <p className="text-gray-600">
-                      We select materials based on durability, appearance, and suitability for your specific
-                      application, including vinyl, acrylic, aluminum, and more.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="mr-4 flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-red-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="h-6 w-6 text-red-600"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M6 13.5V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m12-3V3.75m0 9.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 3.75V16.5m-6-9V3.75m0 3.75a1.5 1.5 0 0 1 0 3m0-3a1.5 1.5 0 0 0 0 3m0 9.75V10.5"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-2">Advanced Printing Technology</h3>
-                    <p className="text-gray-600">
-                      Our state-of-the-art digital printing equipment ensures vibrant colors, sharp details, and
-                      consistent quality across all your signage.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="flex">
-                  <div className="mr-4 flex-shrink-0">
-                    <div className="flex items-center justify-center w-12 h-12 rounded-full bg-red-100">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        strokeWidth={1.5}
-                        stroke="currentColor"
-                        className="h-6 w-6 text-red-600"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18"
-                        />
-                      </svg>
-                    </div>
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold mb-2">Innovative Solutions</h3>
-                    <p className="text-gray-600">
-                      We stay at the forefront of signage innovation, offering solutions like LED illumination,
-                      interactive displays, and eco-friendly materials.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
-
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="relative h-[500px] rounded-lg overflow-hidden"
-            >
-              <Image
-                src="/images/signage-materials.png"
-                alt="Signage Materials & Technology"
-                fill
-                className="object-cover"
-              />
-            </motion.div>
-          </div>
-        </div>
-      </section>
-
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-red-600 text-white">
         <div className="container mx-auto px-4 text-center">
@@ -564,7 +445,7 @@ export default function TriosignsPage() {
               <Button
                 size="lg"
                 variant="outline"
-                className="text-white border-white hover:bg-white hover:text-red-600 group"
+                className="text-white border-white hover:bg-white bg-white/5 hover:text-red-600 group"
               >
                 <span>Contact Us</span>
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
