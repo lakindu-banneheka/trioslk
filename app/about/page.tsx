@@ -2,23 +2,31 @@
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { CheckCircle2, Users, Award, Target, ArrowRight, Instagram } from "lucide-react"
+import { Users, Award, ArrowRight, Instagram } from "lucide-react"
 import Autoplay from "embla-carousel-autoplay"
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import { teamMembers } from "@/data/about"
+import { motion } from "@/components/motion"
 
 export default function AboutPage() {
   return (
     <div className="flex flex-col w-full">
       {/* Hero Section */}
-      <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden">
+      <motion.section
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="relative h-[50vh] min-h-[400px] w-full overflow-hidden"
+      >
         <div className="absolute inset-0 z-0">
-          <Image src="/images/about-hero.jpg" alt="About Trios.LK" fill className="object-cover" priority />
+          <Image src="/images/hero/1.jpeg" alt="About TriosLK" fill className="object-cover" priority />
+          
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About Trios.LK</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About TriosLK</h1>
             <p className="text-lg md:text-xl text-gray-200">
               We are a creative agency specializing in event planning, signage solutions, photography, and educational
               programs.
@@ -26,16 +34,22 @@ export default function AboutPage() {
            
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Our Story */}
-      <section className="py-16 md:py-24">
+      <motion.section
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.1, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="py-16 md:py-24"
+      >
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6">
-                Founded in 2017, Trios.LK began as a small event planning company with a vision to provide comprehensive
+                Founded in 2017, TriosLK began as a small event planning company with a vision to provide comprehensive
                 creative services under one roof. Over the years, we have expanded our offerings to include signage
                 solutions, professional photography, and educational programs through our Trios Academy.
               </p>
@@ -45,19 +59,25 @@ export default function AboutPage() {
                 special day to large corporations hosting major events.
               </p>
               <p className="text-gray-600">
-                Today, Trios.LK stands as a testament to our dedication to quality and innovation. We continue to grow
+                Today, TriosLK stands as a testament to our dedication to quality and innovation. We continue to grow
                 and evolve, always staying true to our core values and mission to bring our clients' visions to life.
               </p>
             </div>
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/our-story.jpg" alt="Our Story" fill className="object-cover" />
+              <Image src="/images/our-story.jpeg" alt="Our Story" fill className="object-cover" />
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Core Values */}
-      <section className="py-16 md:py-24">
+      <motion.section
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.6, delay: 0.2, ease: 'easeOut' }}
+        viewport={{ once: true }}
+        className="py-16 md:py-24"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Partners</h2>
@@ -89,14 +109,20 @@ export default function AboutPage() {
             </Button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Team */}
-      <section className="py-16 md:py-24 bg-gray-50">
+      <motion.section
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.3, ease: 'easeInOut' }}
+        viewport={{ once: true }}
+        className="py-16 md:py-24 bg-gray-50"
+      >
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Meet the talented professionals behind Trios.LK</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Meet the talented professionals behind TriosLK</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -122,7 +148,7 @@ export default function AboutPage() {
                           fill="currentColor"
                           viewBox="0 0 16 16"
                         >
-                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.049c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.049H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
                         </svg>
                       </a>
                     }
@@ -167,16 +193,22 @@ export default function AboutPage() {
             <Button className="bg-red-600 hover:bg-red-700">Join Our Team</Button>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* Why Choose Us */}
-      <section className="py-16 md:py-24">
+      <motion.section
+        initial={{ opacity: 0, scale: 0.98 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5, delay: 0.4, ease: 'easeIn' }}
+        viewport={{ once: true }}
+        className="py-16 md:py-24"
+      >
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Trios.LK</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose TriosLK</h2>
               <p className="text-gray-600 mb-8">
-                At Trios.LK, we are committed to delivering exceptional services that exceed our clients' expectations.
+                At TriosLK, we are committed to delivering exceptional services that exceed our clients' expectations.
                 Here's what sets us apart:
               </p>
 
@@ -269,18 +301,24 @@ export default function AboutPage() {
             </div>
 
             <div className="relative h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/why-choose-us.jpg" alt="Why Choose Trios.LK" fill className="object-cover" />
+              <Image src="/images/why-choose-us.jpeg" alt="Why Choose TriosLK" fill className="object-cover" />
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-red-600 text-white">
+      <motion.section
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, delay: 0.5, ease: 'easeInOut' }}
+        viewport={{ once: true }}
+        className="py-16 md:py-24 bg-red-600 text-white"
+      >
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your project and discover how Trios.LK can help you achieve your goals.
+            Contact us today to discover how TriosLK can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
@@ -295,7 +333,7 @@ export default function AboutPage() {
             </Link>
           </div>
         </div>
-      </section>
+      </motion.section>
     </div>
   )
 }

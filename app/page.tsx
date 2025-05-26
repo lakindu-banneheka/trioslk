@@ -151,7 +151,7 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="relative h-[400px] lg:h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/about-preview.jpg" alt="About Trios.LK" fill className="object-cover" />
+              <Image src="/images/team/team.jpeg" alt="About Trios.LK" fill className="object-cover" />
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">About TriosLK</h2>
