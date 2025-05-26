@@ -12,7 +12,7 @@ export default function TriosignsPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/triosigns-hero.png" alt="Triosigns" fill className="object-cover" priority />
+          <Image src="/images/hero/trio-signs-hero.png" alt="Triosigns" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
