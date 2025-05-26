@@ -22,7 +22,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 z-0">
           <Image src="/images/hero/1.jpeg" alt="About TriosLK" fill className="object-cover" priority />
           
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-black/80" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
           <div className="max-w-3xl">

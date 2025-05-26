@@ -11,7 +11,7 @@ export default function Footer() {
           <div className="space-y-4">
             <div className="relative h-16 w-40">
               <Image 
-                src="/trios_logo_wh_bg.jpg" 
+                src="/logo/logo-white.png" 
                 alt="Trios.LK Logo" 
                 fill 
                 className="object-contain w-full h-full" 

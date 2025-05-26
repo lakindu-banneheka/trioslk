@@ -4,6 +4,17 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, ImageIcon, Megaphone, GraduationCap, ArrowRight, CheckCircle2 } from "lucide-react"
 import { featuredEvents } from "@/data/featured-events"
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
+import HeroCarousel from "@/components/hero-carousel"
+
+const heroImages = [
+  "/images/hero/1.jpeg",
+  "/images/hero/2.jpeg",
+  "/images/hero/3.jpeg",
+  "/images/hero/4.jpeg",
+  "/images/hero/5.jpeg"
+]
+
 
 export default function Home() {
   return (
@@ -11,7 +22,9 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero-bg.jpg" alt="Trios.LK Hero" fill className="object-cover" priority />
+          <HeroCarousel />
+          <div className="absolute inset-0 bg-black/40" />
+
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">

@@ -55,27 +55,16 @@ export default function Header() {
       <div className="container mx-auto px-4 py-3">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="relative h-12 w-32 md:h-14 md:w-36">
-            {/* <Image
-              src="/images/trios-logo.png"
+          <Link href="/" className="relative h-10 w-24 md:h-14 md:w-36">
+            <Image
+              src="/logo/logo-black.png"
               alt="Trios.LK Logo"
               fill
-              className="object-contain dark:hidden"
+              className="object-contain"
+              // sizes="(max-width: 768px) 100vw, (min-width: 769px) 200px"
+              loading="eager" // Ensure the logo loads immediately for better UX
               priority
             />
-            <Image
-              src="/images/trios-logo-white.png"
-              alt="Trios.LK Logo"
-              fill
-              className="object-contain hidden dark:block"
-              priority
-            /> */}
-            <div
-              className="flex items-center justify-center h-full w-full text-2xl font-bold text-red-600 dark:text-red-400"
-              style={{ fontFamily: "'Poppins', sans-serif" }}
-            >
-              TriosLK
-            </div>
           </Link>
 
           {/* Desktop Navigation */}
@@ -103,7 +92,7 @@ export default function Header() {
           </nav>
 
           {/* Contact Info - Desktop */}
-          <div className="hidden lg:flex items-center space-x-6">
+          <div className="hidden xl:flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Mail className="h-4 w-4 text-red-600 dark:text-red-400" />
               <span className="text-sm dark:text-gray-200">triosk3@gmail.com</span>

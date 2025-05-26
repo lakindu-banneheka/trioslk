@@ -8,7 +8,7 @@ import Link from "next/link"
 import { ArrowRight } from "lucide-react"
 import AnimatedFAQ from "@/components/animated-faq"
 import { motion } from "@/components/motion"
-import { faqs } from "@/data/triovents"
+import { eventServices, faqs } from "@/data/triovents"
 import { featuredEvents } from "@/data/featured-events"
 
 export default function TrioventsPage() {
@@ -19,7 +19,7 @@ export default function TrioventsPage() {
       {/* Hero Section */}
       <section className="relative h-[50vh] min-h-[400px] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/triovents-hero.jpg" alt="Triovents" fill className="object-cover" priority />
+          <Image src="/images/hero/9.jpeg" alt="Triovents" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
@@ -70,120 +70,32 @@ export default function TrioventsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Corporate Events */}
-            <Card className="overflow-hidden transition-all hover:shadow-lg dark:bg-gray-800 dark:border-gray-700">
-              <div className="relative h-48">
-                <Image src="/images/corporate-events.jpg" alt="Corporate Events" fill className="object-cover" />
-              </div>
-              <CardContent className="p-6">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-full">
-                    <Users className="h-6 w-6 text-red-600 dark:text-red-400" />
-                  </div>
+            { eventServices.map((service, index) => (
+              <Card className="overflow-hidden transition-all hover:shadow-lg dark:bg-gray-800 dark:border-gray-700" key={index}>
+                <div className="relative h-48">
+                  <Image src={service.image} alt={service.title} fill className="object-cover" />
                 </div>
-                <h3 className="text-xl font-bold text-center mb-2 dark:text-white">Corporate Events</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
-                  Conferences, seminars, product launches, team building activities, and corporate celebrations
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">Venue selection and management</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">
-                      Audio-visual setup and technical support
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">Catering and hospitality services</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Social Events */}
-            <Card className="overflow-hidden transition-all hover:shadow-lg dark:bg-gray-800 dark:border-gray-700">
-              <div className="relative h-48">
-                <Image src="/images/social-events.jpg" alt="Social Events" fill className="object-cover" />
-              </div>
-              <CardContent className="p-6">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-full">
-                    <Calendar className="h-6 w-6 text-red-600 dark:text-red-400" />
+                <CardContent className="p-6">
+                  <div className="mb-4 flex justify-center">
+                    <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-full">
+                      {service.icon}
+                    </div>
                   </div>
-                </div>
-                <h3 className="text-xl font-bold text-center mb-2 dark:text-white">Social Events</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
-                  Weddings, anniversaries, birthday celebrations, engagement parties, and family gatherings
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">Theme development and decor</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">
-                      Entertainment and music coordination
-                    </span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">
-                      Photography and videography services
-                    </span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            {/* Special Events */}
-            <Card className="overflow-hidden transition-all hover:shadow-lg dark:bg-gray-800 dark:border-gray-700">
-              <div className="relative h-48">
-                <Image src="/images/special-events.jpg" alt="Special Events" fill className="object-cover" />
-              </div>
-              <CardContent className="p-6">
-                <div className="mb-4 flex justify-center">
-                  <div className="p-3 bg-red-100 dark:bg-red-900/30 rounded-full">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      strokeWidth={1.5}
-                      stroke="currentColor"
-                      className="h-6 w-6 text-red-600 dark:text-red-400"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        d="M9.813 15.904 9 18.75l-.813-2.846a4.5 4.5 0 0 0-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 0 0 3.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 0 0 3.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 0 0-3.09 3.09ZM18.259 8.715 18 9.75l-.259-1.035a3.375 3.375 0 0 0-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 0 0 2.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 0 0 2.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 0 0-2.456 2.456ZM16.894 20.567 16.5 21.75l-.394-1.183a2.25 2.25 0 0 0-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 0 0 1.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 0 0 1.423 1.423l1.183.394-1.183.394a2.25 2.25 0 0 0-1.423 1.423Z"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <h3 className="text-xl font-bold text-center mb-2 dark:text-white">Special Events</h3>
-                <p className="text-gray-600 dark:text-gray-300 text-center mb-4">
-                  Festivals, concerts, charity galas, award ceremonies, and cultural celebrations
-                </p>
-                <ul className="space-y-2 mb-6">
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">Logistics and vendor management</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">Marketing and promotion</span>
-                  </li>
-                  <li className="flex items-start">
-                    <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
-                    <span className="text-sm text-gray-600 dark:text-gray-300">Ticketing and registration systems</span>
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
+                  <h3 className="text-xl font-bold text-center mb-2 dark:text-white">{service.title}</h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-ellipsis mb-4">
+                    {service.description}
+                  </p>
+                  <ul className="space-y-2 mb-6">
+                    { service.features.map((feature, featureIndex) => (
+                      <li className="flex items-start" key={featureIndex}>
+                        <CheckCircle2 className="h-5 w-5 text-red-600 dark:text-red-400 mt-0.5 mr-2 flex-shrink-0" />
+                        <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
