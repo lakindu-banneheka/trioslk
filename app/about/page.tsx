@@ -67,12 +67,12 @@ export default function AboutPage() {
           {/* Our Partners carousel */}
           <Carousel opts={{ loop: true, align: 'start' }} plugins={[Autoplay({ delay: 3000, stopOnInteraction: false })]} className="py-8">
             <CarouselContent className="!flex-nowrap">
-              {[1, 2, 3, 4, 1, 2, 3, 4].map((i, idx) => (
+              {[1, 2, 3, 4, 5, 6, 7, 1, 2, 3, 4, 5, 6, 7].map((i, idx) => (
                 <CarouselItem key={idx} className="!basis-1/3 flex items-center justify-center px-4">
                   <Image
-                    src={`/images/partners/${i}.png`}
+                    src={`/images/partners/${i}.jpeg`}
                     alt={`Partner ${i}`}
-                    width={120}
+                    width={200}
                     height={70}
                     className="mx-auto"
                   />
