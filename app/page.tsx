@@ -64,8 +64,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Triovents */}
             <Card className="overflow-hidden transition-all hover:shadow-lg">
-              <div className="relative h-48">
-                <Image src="/images/triovents.jpg" alt="Triovents" fill className="object-cover" />
+              <div className="relative h-48 bg-black">
+                <Image src="/logo/triovents-logo.png" alt="Triovents" fill className="object-cover" />
               </div>
               <CardContent className="p-6">
                 <div className="mb-4 flex justify-center">
@@ -88,8 +88,8 @@ export default function Home() {
 
             {/* Triosigns */}
             <Card className="overflow-hidden transition-all hover:shadow-lg">
-              <div className="relative h-48">
-                <Image src="/images/triosigns.jpg" alt="Triosigns" fill className="object-cover" />
+              <div className="relative h-48 bg-black">
+                <Image src="/logo/triosigns-logo.png" alt="Triosigns" fill className="object-cover" />
               </div>
               <CardContent className="p-6">
                 <div className="mb-4 flex justify-center">
@@ -110,8 +110,8 @@ export default function Home() {
 
             {/* Triography */}
             <Card className="overflow-hidden transition-all hover:shadow-lg">
-              <div className="relative h-48">
-                <Image src="/images/triography.jpg" alt="Triography" fill className="object-cover" />
+              <div className="relative h-48 bg-black">
+                <Image src="/logo/triography-logo.png" alt="Triography" fill className="object-cover" />
               </div>
               <CardContent className="p-6">
                 <div className="mb-4 flex justify-center">
