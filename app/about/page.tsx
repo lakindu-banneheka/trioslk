@@ -20,7 +20,7 @@ export default function AboutPage() {
         className="relative h-[50vh] min-h-[400px] w-full overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero/1.jpeg" alt="About TRIOSLK" fill className="object-cover" priority />
+          <Image src="/images/hero/1.jpeg" alt="About TRIOSlk" fill className="object-cover" priority />
           
           <div className="absolute inset-0 bg-black/80" />
         </div>
@@ -190,7 +190,7 @@ export default function AboutPage() {
           </div>
 
           <div className="text-center mt-12">
-            <Button className="bg-red-600 hover:bg-red-700">Join Our Team</Button>
+            {/* <Button className="bg-red-600 hover:bg-red-700">Join Our Team</Button> */}
           </div>
         </div>
       </motion.section>
