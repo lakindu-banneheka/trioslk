@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label"
 import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, CheckCircle2, Loader2 } from "lucide-react"
 import { motion } from "@/components/motion"
 import Link from "next/link"
+import { toast } from "sonner"
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -33,25 +34,42 @@ export default function ContactPage() {
     })
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
     setError("")
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false)
-      setIsSubmitted(true)
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+          body: JSON.stringify(formState),
+        });
 
-      // Reset form after submission
-      setFormState({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        message: "",
-      })
-    }, 1500)
+        if (response.ok) {
+          toast.success('Email sent successfully!');
+        } else {
+          const errorData = await response.json();
+          setError(errorData.message || 'An error occurred while sending the email.');
+          toast.error(errorData.message || 'An error occurred while sending the email.');
+        }
+        
+        setFormState({
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        })
+      } catch (error) {
+        console.error('Error submitting form:', error);
+        setError('An error occurred while sending your message. Please try again later.');
+        toast.error('An error occurred while sending your message. Please try again later.');
+      }
+    setIsSubmitting(false)
+    setIsSubmitted(true)
   }
 
   const faqs = [
