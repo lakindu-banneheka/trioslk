@@ -259,7 +259,7 @@ export default function TrioventsPage() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+      {/* <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <motion.h2
@@ -283,7 +283,6 @@ export default function TrioventsPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Testimonial 1 */}
             <Card className="p-6 dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="p-0">
                 <div className="flex flex-col h-full">
@@ -325,7 +324,6 @@ export default function TrioventsPage() {
               </CardContent>
             </Card>
 
-            {/* Testimonial 2 */}
             <Card className="p-6 dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="p-0">
                 <div className="flex flex-col h-full">
@@ -367,7 +365,6 @@ export default function TrioventsPage() {
               </CardContent>
             </Card>
 
-            {/* Testimonial 3 */}
             <Card className="p-6 dark:bg-gray-800 dark:border-gray-700">
               <CardContent className="p-0">
                 <div className="flex flex-col h-full">
@@ -410,7 +407,7 @@ export default function TrioventsPage() {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* FAQ Section */}
       <section className="py-16 md:py-24 dark:bg-gray-900">
