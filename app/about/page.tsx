@@ -20,13 +20,13 @@ export default function AboutPage() {
         className="relative h-[50vh] min-h-[400px] w-full overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
-          <Image src="/images/hero/1.jpeg" alt="About TriosLK" fill className="object-cover" priority />
+          <Image src="/images/hero/1.jpeg" alt="About TRIOSLK" fill className="object-cover" priority />
           
           <div className="absolute inset-0 bg-black/80" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
           <div className="max-w-3xl">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About TriosLK</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">About TRIOSLK</h1>
             <p className="text-lg md:text-xl text-gray-200">
               We are a creative agency specializing in event planning, signage solutions, photography, and educational
               programs.
@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6">
-                Founded in 2017, TriosLK began as a small event planning company with a vision to provide comprehensive
+                Founded in 2017, Trioslk began as a small event planning company with a vision to provide comprehensive
                 creative services under one roof. Over the years, we have expanded our offerings to include signage
                 solutions, professional photography, and educational programs through our Trios Academy.
               </p>
@@ -59,7 +59,7 @@ export default function AboutPage() {
                 special day to large corporations hosting major events.
               </p>
               <p className="text-gray-600">
-                Today, TriosLK stands as a testament to our dedication to quality and innovation. We continue to grow
+                Today, Trioslk stands as a testament to our dedication to quality and innovation. We continue to grow
                 and evolve, always staying true to our core values and mission to bring our clients' visions to life.
               </p>
             </div>
@@ -122,7 +122,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Team</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">Meet the talented professionals behind TriosLK</p>
+            <p className="text-gray-600 max-w-2xl mx-auto">Meet the talented professionals behind Trioslk</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -206,9 +206,9 @@ export default function AboutPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose TriosLK</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Trioslk</h2>
               <p className="text-gray-600 mb-8">
-                At TriosLK, we are committed to delivering exceptional services that exceed our clients' expectations.
+                At Trioslk, we are committed to delivering exceptional services that exceed our clients' expectations.
                 Here's what sets us apart:
               </p>
 
@@ -245,7 +245,7 @@ export default function AboutPage() {
             </div>
 
             <div className="relative h-[500px] rounded-lg overflow-hidden">
-              <Image src="/images/why-choose-us.jpeg" alt="Why Choose TriosLK" fill className="object-cover" />
+              <Image src="/images/why-choose-us.jpeg" alt="Why Choose Trioslk" fill className="object-cover" />
             </div>
           </div>
         </div>
@@ -262,7 +262,7 @@ export default function AboutPage() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Work With Us?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today to discover how TriosLK can help you achieve your goals.
+            Contact us today to discover how Trioslk can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">

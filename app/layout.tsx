@@ -11,20 +11,20 @@ import { Toaster } from "@/components/ui/sonner"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "TriosLK",
+  title: "TRIOSLK",
   metadataBase: new URL("https://trios.lk"),
   openGraph: {
-    title: "TriosLK",
+    title: "Trioslk",
     description:
       "Trios.LK offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
     url: "https://trios.lk",
-    siteName: "TriosLK",
+    siteName: "Trioslk",
     images: [
       {
         url: "https://trios.lk/images/og-image.png",
         width: 1200,
         height: 630,
-        alt: "TriosLK - Event Planning, Signage Solutions, Photography, and Education",
+        alt: "Trioslk - Event Planning, Signage Solutions, Photography, and Education",
       },
     ],
     locale: "en_US",
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   keywords: [
-    "TriosLK",
+    "Trioslk",
     "Event Planning",
     "Signage Solutions",
     "Photography",
