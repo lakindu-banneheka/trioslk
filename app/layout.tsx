@@ -6,6 +6,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { ThemeProvider } from "@/components/theme-provider"
 import ScrollToTop from "@/components/scroll-to-top"
+import { Toaster } from "@/components/ui/sonner"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -67,6 +68,7 @@ export default function RootLayout({
             </main>
             <Footer />
           </div>
+          <Toaster position="top-center" />
         </ThemeProvider>
       </body>
     </html>
