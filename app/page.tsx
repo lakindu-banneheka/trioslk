@@ -4,16 +4,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, ImageIcon, Megaphone, GraduationCap, ArrowRight, CheckCircle2 } from "lucide-react"
 import { featuredEvents } from "@/data/featured-events"
-import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel"
 import HeroCarousel from "@/components/hero-carousel"
-
-const heroImages = [
-  "/images/hero/1.jpeg",
-  "/images/hero/2.jpeg",
-  "/images/hero/3.jpeg",
-  "/images/hero/4.jpeg",
-  "/images/hero/5.jpeg"
-]
 
 
 export default function Home() {
