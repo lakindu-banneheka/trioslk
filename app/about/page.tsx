@@ -189,9 +189,9 @@ export default function AboutPage() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12"> */}
             {/* <Button className="bg-red-600 hover:bg-red-700">Join Our Team</Button> */}
-          </div>
+          {/* </div> */}
         </div>
       </motion.section>
 
