@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Trioslk",
     description:
-      "Trios.LK offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
+      "Trios.lk offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
     url: "https://trios.lk",
     siteName: "Trioslk",
     images: [
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "Community Events",
     "Educational Programs",
   ],
-  description: "Trios.LK offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
+  description: "Trios.lk offers event planning, signage solutions, photography, and educational programs through Trios Academy.",
 }
 
 export default function RootLayout({
