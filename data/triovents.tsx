@@ -73,13 +73,13 @@ export const testimonials = [
     name: "John Doe",
     role: "CEO, Example Corp",
     image: "/images/testimonials/john-doe.jpg",
-    feedback: "TriosLK transformed our corporate event into an unforgettable experience. Their attention to detail and creativity were outstanding!"
+    feedback: "Trioslk transformed our corporate event into an unforgettable experience. Their attention to detail and creativity were outstanding!"
   },
   {
     name: "Jane Smith",
     role: "Wedding Planner",
     image: "/images/testimonials/jane-smith.jpg",
-    feedback: "The team at TriosLK made our wedding day magical. They handled everything flawlessly, allowing us to enjoy every moment."
+    feedback: "The team at Trioslk made our wedding day magical. They handled everything flawlessly, allowing us to enjoy every moment."
   }
 ];
 

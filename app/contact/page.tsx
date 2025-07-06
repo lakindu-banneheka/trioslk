@@ -445,7 +445,7 @@ export default function ContactPage() {
               style={{ border: 0 }}
               allowFullScreen
               loading="lazy"
-              title="Trios.LK Office Location"
+              title="Trios.lk Office Location"
             ></iframe>
           </motion.div>
         </div>
@@ -470,7 +470,7 @@ export default function ContactPage() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-xl mb-8 max-w-2xl mx-auto"
           >
-            Contact us today to discuss your requirements and discover how Trios.LK can help bring your vision to life.
+            Contact us today to discuss your requirements and discover how Trios.lk can help bring your vision to life.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
