@@ -158,9 +158,9 @@ export default function Home() {
               <Image src="/images/team/team.jpeg" alt="About Trios.LK" fill className="object-cover" />
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-bold mb-6">About TriosLK</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">About TRIOSLK</h2>
               <p className="text-gray-600 mb-6">
-                Founded in 2017, TriosLk has grown from a small planning team to a full-service event planning company known for excellence, 
+                Founded in 2017, Trioslk has grown from a small planning team to a full-service event planning company known for excellence, 
                 creativity, and attention to detail. With years of experience and a diverse portfolio of concerts, weddings, corporate events, 
                 parties, and more, we know how to make each occasion uniquely yours.
               </p>
@@ -381,7 +381,7 @@ export default function Home() {
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Bring Your Vision to Life?</h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Contact us today to discuss your project and discover how TriosLK can help you achieve your goals.
+            Contact us today to discuss your project and discover how Trioslk can help you achieve your goals.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/contact">
