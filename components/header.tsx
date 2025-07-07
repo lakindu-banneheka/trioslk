@@ -8,7 +8,6 @@ import { Phone, Mail, Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
 import { motion } from "@/components/motion"
-import { ThemeToggle } from "@/components/theme-toggle"
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -58,7 +57,7 @@ export default function Header() {
           <Link href="/" className="relative h-10 w-24 md:h-14 md:w-36">
             <Image
               src="/logo/logo-black.png"
-              alt="Trios.LK Logo"
+              alt="Trios.lk Logo"
               fill
               className="object-contain"
               // sizes="(max-width: 768px) 100vw, (min-width: 769px) 200px"
@@ -94,11 +93,15 @@ export default function Header() {
           {/* Contact Info - Desktop */}
           <div className="hidden xl:flex items-center space-x-6">
             <div className="flex items-center space-x-2">
-              <Mail className="h-4 w-4 text-red-600 dark:text-red-400" />
-              <span className="text-sm dark:text-gray-200">triosk3@gmail.com</span>
+              <Link href="mailto:trioslk3@gmail.com" target="_blank">
+                <Mail className="h-4 w-4 text-red-600 dark:text-red-400" />
+              </Link>
+              <span className="text-sm dark:text-gray-200">trioslk3@gmail.com</span>
             </div>
             <div className="flex items-center space-x-2">
-              <Phone className="h-4 w-4 text-red-600 dark:text-red-400" />
+              <Link href="tel:+94742699814">
+                <Phone className="h-4 w-4 text-red-600 dark:text-red-400" />
+              </Link>
               <span className="text-sm dark:text-gray-200">+94 74 269 9814</span>
             </div>
             <Link href="/contact">
@@ -144,11 +147,15 @@ export default function Header() {
             </nav>
             <div className="mt-4 pt-4 border-t border-gray-100 dark:border-gray-800 space-y-3">
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-red-600 dark:text-red-400" />
+                <Link href="mailto:trioslk3@gmail.com" target="_blank">
+                  <Mail className="h-4 w-4 text-red-600 dark:text-red-400" />
+                </Link>
                 <span className="text-sm dark:text-gray-200">triosk3@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2">
-                <Phone className="h-4 w-4 text-red-600 dark:text-red-400" />
+                <Link href="tel:+94742699814">
+                  <Phone className="h-4 w-4 text-red-600 dark:text-red-400" />
+                </Link>
                 <span className="text-sm dark:text-gray-200">+94 74 269 9814</span>
               </div>
               <Link href="/contact" onClick={closeMenu}>

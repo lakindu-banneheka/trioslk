@@ -1,4 +1,5 @@
 export const trioslk = {
+    gmail: "trioslk3@gmail.com",
     facebook: "https://www.facebook.com/trioslk",
     instagram: "https://www.instagram.com/_trioslk_?igsh=Y3FncWZrdW55OTVx",
     tiktok: "https://www.tiktok.com/@trioslk?_t=ZS-8xnvk2ExAXd&_r=1",

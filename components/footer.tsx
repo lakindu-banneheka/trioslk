@@ -122,7 +122,7 @@ export default function Footer() {
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="h-5 w-5 text-red-500 flex-shrink-0" />
-                <span className="text-gray-300 text-sm">triosk3@gmail.com</span>
+                <span className="text-gray-300 text-sm">trioslk3@gmail.com</span>
               </li>
             </ul>
           </div>
@@ -136,6 +136,9 @@ export default function Footer() {
             </Link>
             <Link href="/terms-of-service" className="text-gray-400 hover:text-red-500 text-sm">
               Terms of Service
+            </Link>
+            <Link href="/refund-policy" className="text-gray-400 hover:text-red-500 text-sm">
+              Refund Policy
             </Link>
             <p className="text-gray-500 text-sm">
               Powered by <span className="text-red-400">OctaCodz</span>
