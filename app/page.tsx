@@ -126,7 +126,7 @@ export default function Home() {
             {/* Trios Academy */}
             <Card className="overflow-hidden transition-all hover:shadow-lg">
               <div className="relative h-48">
-                <Image src="/images/trios-academy.jpg" alt="Trios Academy" fill className="object-cover" />
+                <Image src="/logo/academy-logo.png" alt="Trios Academy" fill className="object-cover" />
               </div>
               <CardContent className="p-6">
                 <div className="mb-4 flex justify-center">

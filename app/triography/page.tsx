@@ -5,10 +5,11 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { motion } from "@/components/motion"
 import Link from "next/link"
-import { Camera, Users, Award, ChevronRight, Images } from "lucide-react"
+import { Camera, Users, Award, ChevronRight, Images, Facebook, Instagram } from "lucide-react"
 import AnimatedFAQ from "@/components/animated-faq"
 import ImageLightbox from "@/components/image-lightbox"
 import { faqs, galleryItems } from "@/data/triography"
+import { triography } from "@/data/links"
 
 export default function TriographyPage() {
   const [lightboxOpen, setLightboxOpen] = useState(false)
@@ -41,10 +42,35 @@ export default function TriographyPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-200 mb-8"
+              className="text-xl md:text-2xl text-gray-200 mb-2"
             >
               Capturing moments, creating memories that last a lifetime
             </motion.p>
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="flex space-x-4 pt-0 mb-8"
+            >
+                <Link href={triography.facebook} className="text-gray-300 hover:text-red-500 transition-colors" target="_blank">
+                  <Facebook className="h-5 w-5" />
+                  <span className="sr-only">Facebook</span>
+                </Link>
+                {/* <Link href={triography.tiktok} className="text-gray-300 hover:text-red-500 transition-colors" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" className="bi bi-tiktok" viewBox="0 0 16 16">
+                    <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                  </svg>
+                  <span className="sr-only">Tiktok</span>
+                </Link> */}
+                {/* <Link href="https://youtube.com" className="text-gray-300 hover:text-red-500 transition-colors" target="_blank">
+                  <Youtube className="h-5 w-5" />
+                  <span className="sr-only">YouTube</span>
+                </Link> */}
+                <Link href={triography.instagram} className="text-gray-300 hover:text-red-500 transition-colors" target="_blank">
+                  <Instagram className="h-5 w-5" />
+                  <span className="sr-only">Instagram</span>
+                </Link>
+            </motion.div>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}

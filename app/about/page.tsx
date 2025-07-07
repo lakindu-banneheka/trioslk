@@ -49,7 +49,7 @@ export default function AboutPage() {
             <div>
               <h2 className="text-3xl md:text-4xl font-bold mb-6">Our Story</h2>
               <p className="text-gray-600 mb-6">
-                Founded in 2017, Trioslk began as a small event planning company with a vision to provide comprehensive
+                Founded in 2018, Trioslk began as a small event planning company with a vision to provide comprehensive
                 creative services under one roof. Over the years, we have expanded our offerings to include signage
                 solutions, professional photography, and educational programs through our Trios Academy.
               </p>
