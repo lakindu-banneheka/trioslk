@@ -72,8 +72,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/trios-academy" className="text-gray-300 hover:text-red-500 transition-colors text-sm">
-                  Trios Academy
+                <Link href="/trioslk-academy" className="text-gray-300 hover:text-red-500 transition-colors text-sm">
+                  Trioslk Academy
                 </Link>
               </li>
             </ul>
@@ -99,7 +99,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/trios-academy" className="text-gray-300 hover:text-red-500 transition-colors text-sm">
+                <Link href="/trioslk-academy" className="text-gray-300 hover:text-red-500 transition-colors text-sm">
                   Training Programs
                 </Link>
               </li>

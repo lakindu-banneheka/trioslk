@@ -42,7 +42,7 @@ export default function Header() {
     { name: "Triovents", href: "/triovents" },
     { name: "Triosigns", href: "/triosigns" },
     { name: "Triography", href: "/triography" },
-    { name: "Trios Academy", href: "/trios-academy" }
+    { name: "Trioslk Academy", href: "/trioslk-academy" }
   ]
 
   return (

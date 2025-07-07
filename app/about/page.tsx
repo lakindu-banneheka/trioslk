@@ -51,7 +51,7 @@ export default function AboutPage() {
               <p className="text-gray-600 mb-6">
                 Founded in 2018, Trioslk began as a small event planning company with a vision to provide comprehensive
                 creative services under one roof. Over the years, we have expanded our offerings to include signage
-                solutions, professional photography, and educational programs through our Trios Academy.
+                solutions, professional photography, and educational programs through our Trioslk Academy.
               </p>
               <p className="text-gray-600 mb-6">
                 Our journey has been marked by a commitment to excellence, creativity, and customer satisfaction. We

@@ -125,7 +125,7 @@ export default function Home() {
 
             {/* Trios Academy */}
             <Card className="overflow-hidden transition-all hover:shadow-lg">
-              <div className="relative h-48">
+              <div className="relative h-48 bg-black">
                 <Image src="/logo/academy-logo.png" alt="Trios Academy" fill className="object-cover" />
               </div>
               <CardContent className="p-6">
@@ -134,12 +134,12 @@ export default function Home() {
                     <GraduationCap className="h-6 w-6 text-red-600" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-center mb-2">Trios Academy</h3>
+                <h3 className="text-xl font-bold text-center mb-2">Trioslk Academy</h3>
                 <p className="text-gray-600 text-center mb-4">
                   Educational programs and courses to develop your creative skills
                 </p>
                 <Link
-                  href="/trios-academy"
+                  href="/trioslk-academy"
                   className="flex items-center justify-center text-red-600 hover:text-red-700 font-medium"
                 >
                   Learn More <ArrowRight className="ml-2 h-4 w-4" />
