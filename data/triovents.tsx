@@ -12,7 +12,7 @@ interface EventService {
 
 export const eventServices: EventService[] = [
   {
-    image: "/images/event-planning.jpg",
+    image: "/images/triovents/Corporate-Events-and-Brand-Experiences.jpeg",
     title: "Corporate Events & Brand Experiences",
     description: "From strategic launches to immersive networking events, we design and deliver polished experiences that elevate your brand, engage your audience, and leave a lasting impact. Professionalism meets creativity in every event we craft.",
     icon: <Users className="h-6 w-6 text-red-600 dark:text-red-400" />,
@@ -26,7 +26,7 @@ export const eventServices: EventService[] = [
     ]
   },
   {
-    image: "/images/wedding-planning.jpg",
+    image: "/images/triovents/Weddings-and-Celebrations.jpeg",
     title: "Weddings & Celebrations",
     description: "We bring love stories to life with heartfelt detail and elegance. Whether it's a grand celebration or an intimate affair, our wedding experiences are tailored to reflect each couple's unique journey, blending tradition, emotion, and style seamlessly.",
     icon: <svg
@@ -54,7 +54,7 @@ export const eventServices: EventService[] = [
     ]
   },
   {
-    image: "/images/social-events.jpg",
+    image: "/images/triovents/Concerts-and-Experiences.jpeg",
     title: "Concerts & Experiences",
     description: "High-energy, trend-forward, and unforgettable — we curate social gatherings that captivate. From concerts and parties to pop-up events, we turn your vision into vibrant experiences that connect people and spark joy.",
     icon: <Calendar className="h-6 w-6 text-red-600 dark:text-red-400" />,

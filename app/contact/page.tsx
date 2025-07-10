@@ -13,6 +13,7 @@ import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin, CheckCircl
 import { motion } from "@/components/motion"
 import Link from "next/link"
 import { toast } from "sonner"
+import { trioslk } from "@/data/links"
 
 export default function ContactPage() {
   const [formState, setFormState] = useState({
@@ -105,7 +106,7 @@ export default function ContactPage() {
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/contact-hero.png" alt="Contact Us" fill className="object-cover" priority />
+          <Image src="/images/contact-us-hero.jpg" alt="Contact Us" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
@@ -333,10 +334,10 @@ export default function ContactPage() {
                     <h3 className="text-lg font-bold mb-2 dark:text-white">Email</h3>
                     <p className="text-gray-600 dark:text-gray-300">
                       <a
-                        href="mailto:triosk3@gmail.com"
+                        href={`mailto:${trioslk.gmail}`}
                         className="hover:text-red-600 dark:hover:text-red-400 transition-colors"
                       >
-                        triosk3@gmail.com
+                        {trioslk.gmail}
                       </a>
                     </p>
                   </div>
@@ -347,7 +348,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-bold mb-4 dark:text-white">Follow Us</h3>
                 <div className="flex space-x-4">
                   <a
-                    href="https://facebook.com"
+                    href={trioslk.facebook}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-red-600 hover:text-white dark:hover:bg-red-600 transition-colors"
@@ -355,32 +356,24 @@ export default function ContactPage() {
                     <Facebook className="h-5 w-5" />
                     <span className="sr-only">Facebook</span>
                   </a>
-                  <a
-                    href="https://twitter.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                   <Link 
+                    href={trioslk.tiktok} 
                     className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-red-600 hover:text-white dark:hover:bg-red-600 transition-colors"
-                  >
-                    <Twitter className="h-5 w-5" />
-                    <span className="sr-only">Twitter</span>
-                  </a>
+                    target="_blank"
+                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" className="bi bi-tiktok" viewBox="0 0 16 16">
+                      <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                    </svg>
+                    <span className="sr-only">Tiktok</span>
+                  </Link>
                   <a
-                    href="https://instagram.com"
+                    href={trioslk.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-red-600 hover:text-white dark:hover:bg-red-600 transition-colors"
                   >
                     <Instagram className="h-5 w-5" />
                     <span className="sr-only">Instagram</span>
-                  </a>
-                  <a
-                    href="https://linkedin.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-10 h-10 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center text-gray-600 dark:text-gray-300 hover:bg-red-600 hover:text-white dark:hover:bg-red-600 transition-colors"
-                  >
-                    <Linkedin className="h-5 w-5" />
-                    <span className="sr-only">LinkedIn</span>
                   </a>
                 </div>
               </div>

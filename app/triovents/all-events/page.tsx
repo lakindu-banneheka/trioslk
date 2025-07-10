@@ -12,7 +12,7 @@ export default function AllEventsPage() {
       {/* Hero Section */}
       <section className="relative h-[40vh] min-h-[300px] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <Image src="/images/all-events-hero.png" alt="All Events" fill className="object-cover" priority />
+          <Image src="/images/all-events-hero.jpeg" alt="All Events" fill className="object-cover" priority />
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40" />
         </div>
         <div className="container mx-auto px-4 relative z-10 h-full flex flex-col justify-center">
@@ -42,38 +42,39 @@ export default function AllEventsPage() {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             { featuredEvents.map((event, index) => (
-              <motion.div
-                key={event.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="group relative overflow-hidden rounded-lg"
-              >
-                <div className="relative h-80">
-                  <Image
-                    src={event.image}
-                    alt={event.title}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
-                <div className="absolute bottom-0 left-0 p-6">
-                  <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-full mb-3">
-                    {event.category}
-                  </span>
-                  <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
-                  <div className="flex items-center text-gray-200 text-sm mb-2">
-                    <Calendar className="h-4 w-4 mr-2" />
-                    <span>{event.date}</span>
+              <Link href={event.link} key={index} target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-lg">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="group relative overflow-hidden rounded-lg"
+                >
+                  <div className="relative h-80">
+                    <Image
+                      src={event.image}
+                      alt={event.title}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    />
                   </div>
-                  <div className="flex items-center text-gray-200 text-sm">
-                    <MapPin className="h-4 w-4 mr-2" />
-                    <span>{event.location}</span>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-80 transition-opacity group-hover:opacity-90" />
+                  <div className="absolute bottom-0 left-0 p-6">
+                    <span className="inline-block px-3 py-1 bg-red-600 text-white text-xs font-medium rounded-full mb-3">
+                      {event.category}
+                    </span>
+                    <h3 className="text-xl font-bold text-white mb-2">{event.title}</h3>
+                    <div className="flex items-center text-gray-200 text-sm mb-2">
+                      <Calendar className="h-4 w-4 mr-2" />
+                      <span>{event.date}</span>
+                    </div>
+                    <div className="flex items-center text-gray-200 text-sm">
+                      <MapPin className="h-4 w-4 mr-2" />
+                      <span>{event.location}</span>
+                    </div>
                   </div>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
 

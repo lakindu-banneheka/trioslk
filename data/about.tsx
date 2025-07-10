@@ -3,26 +3,22 @@ import { Award, User } from "lucide-react";
 export const teamMembers = [
   {
     name: "Duleetha Sandaruwan",
-    role: "Founder and Director",
+    role: "Co-Founder & Director",
     image: "/images/team/duleetha-sandaruwan.png",
     description: "At Trioslk, we believe every event is a story waiting to be told - our passion is bringing that story to life with elegance, creativity, and precision. It's not just about planning; it's about creating moments that last forever.",
     socialmeadia: {
-        linkedin: "https://www.linkedin.com/in/",
         facebook: "https://www.facebook.com/duleetha.sandaruwan",
-        twitter: "https://twitter.com/duleetha_sandaruwan",
         instagram: "https://www.instagram.com/duleetha_sandaruwan/",
     }
   },
   {
     name: "Lasitha Renuka",
     role: "Co-Founder",
-    image: "/images/team/nadeesha-perera.jpg",
-    description: "Nadeesha drives the technical direction of Trios.lk, ensuring our products are cutting-edge and user-friendly.",
+    image: "/images/team/lasitha-renuka.jpeg",
+    description: "Lasitha drives the technical direction of Trios.lk, ensuring our products are cutting-edge and user-friendly.",
     socialmeadia: {
-        linkedin: "https://www.linkedin.com/in/",
-        facebook: "https://www.facebook.com/",
-        twitter: "https://twitter.com/",
-        instagram: "https://www.instagram.com/",
+        facebook: "https://www.facebook.com/share/1EdGNMub1T/?mibextid=wwXIfr",
+        instagram: "https://www.instagram.com/mr.lasitha?igsh=MXN3Y2c1d3ptdXlubA==",
     }
   }
 ];
@@ -49,7 +45,7 @@ export const whyChooseUs = [
   },
   {
     title: "Seamless Experience",
-    description: "We’re all about making things easy for you. From the moment you share your vision, we handle every detail so you can relax and enjoy the event without stress.",
+    description: "We're all about making things easy for you. From the moment you share your vision, we handle every detail so you can relax and enjoy the event without stress.",
     icon: <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
