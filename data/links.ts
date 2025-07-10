@@ -34,3 +34,9 @@ export const triosacademy = {
     // youtube: "https://www.youtube.com/@triosacademy",
 }
 
+export const triosweddings = {
+    facebook: "https://www.facebook.com/profile.php?id=61577779763490&rdid=kaYJiRl1ex6pj9s1&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F19QeTFCiyf%2F#",
+    instagram: "https://www.instagram.com/trioslkweddings/?source=omni_redirect",
+    tiktok: "https://www.tiktok.com/@trioslk.weddings?_t=zs-8xttjrjcjpx&_r=1",
+    whatsapp: "https://api.whatsapp.com/send/?phone=94771216123&text&type=phone_number&app_absent=0",
+}

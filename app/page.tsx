@@ -5,11 +5,15 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, ImageIcon, Megaphone, GraduationCap, ArrowRight, CheckCircle2 } from "lucide-react"
 import { featuredEvents } from "@/data/featured-events"
 import HeroCarousel from "@/components/hero-carousel"
+import WeddingAnnouncementPopup from "@/components/wedding-announcement-popup"
 
 
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
+      {/* Wedding Announcement Popup */}
+      <WeddingAnnouncementPopup />
+
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
         <div className="absolute inset-0 z-0">
