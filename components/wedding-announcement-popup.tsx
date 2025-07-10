@@ -137,7 +137,7 @@ export default function WeddingAnnouncementPopup() {
                     onClick={handleClose}
                     className="block w-full p-3 sm:p-4 bg-rose-500 hover:bg-rose-600 text-white rounded-full text-center font-medium transition-colors text-sm sm:text-base"
                 >
-                  Register for Wedding Show 2025!
+                  Getting Married? Register & Book Now!
                 </a>
 
                 <div className="grid grid-cols-2 gap-2 sm:gap-3">
