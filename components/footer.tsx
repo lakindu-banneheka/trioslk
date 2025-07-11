@@ -143,7 +143,7 @@ export default function Footer() {
             <p className="text-gray-500 text-sm">
               Powered by 
               <Link 
-                href="mailto:octacodz@gmail.com" 
+                href="https://octacodz.vercel.app/" 
                 className="text-red-500 hover:text-red-400 transition-colors" target="_blank">
                 <span className="text-red-400">OctaCodz</span>
               </Link>
