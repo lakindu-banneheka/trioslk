@@ -11,8 +11,6 @@ import WeddingAnnouncementPopup from "@/components/wedding-announcement-popup"
 export default function Home() {
   return (
     <div className="flex flex-col w-full">
-      {/* Wedding Announcement Popup */}
-      <WeddingAnnouncementPopup />
 
       {/* Hero Section */}
       <section className="relative h-[90vh] min-h-[600px] w-full overflow-hidden">
